@@ -1,13 +1,15 @@
-package kpi.kafedra;
+package kpi.univer;
 
 import kpi.Person;
 import kpi.students.Student;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-public class Group {
+public class Group implements Unit, IGroup {
     private final String name;
     private Person headOfGroup;
     private List<Student> students;
@@ -29,16 +31,28 @@ public class Group {
         this.headOfGroup = headOfGroup;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public Person getHeadOfGroup() {
         return headOfGroup;
     }
 
     public List<Student> getStudents() {
         return students;
+    }
+
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public List<Unit> getChildItems() {
+        return new ArrayList<>();
+    }
+
+    @Override
+    public void addChildItem(Unit unit) {
+        throw new NotImplementedException();
     }
 
     @Override
@@ -59,10 +73,15 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group{" +
+        return "IGroup{" +
                 "name='" + name + '\'' +
                 ", headOfGroup=" + headOfGroup +
                 ", students=" + students +
                 '}';
+    }
+
+    @Override
+    public int getSize() {
+        return 0;
     }
 }

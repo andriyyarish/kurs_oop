@@ -1,7 +1,6 @@
 package kpi;
 
-import kpi.kafedra.Group;
-import kpi.kafedra.Kafedra;
+import kpi.univer.*;
 import kpi.kafedra.teachers.ISubject;
 import kpi.kafedra.teachers.Teacher;
 import kpi.students.Student;
@@ -9,7 +8,7 @@ import kpi.students.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class University {
+public class UniverFacade {
 
     private static List<Student> students;
     private static final int STUDENTS_AMOUNT = 90;
@@ -18,16 +17,24 @@ public class University {
 
 
     public static void main(String[] args) {
-        initStudents();
-        initGroups();
-        initTeachers();
+        Univer univer = new Univer();
 
-        Kafedra kafedra = new Kafedra("Ipsa");
-        kafedra.allocateStudents(students);
+        Unit kafedra = new Kafedra("IPSA");
+        univer.addChildItem(kafedra);
 
-        System.out.println(students);
-        System.out.println(groups);
-        System.out.println(teachers);
+        Unit course = new Kourse("Second Diploma", 1,true);
+        kafedra.addChildItem(course);
+
+        Unit group = new Group("IS_ZP-71");
+        Unit group2 = new Group("IS_ZP-72");
+
+        course.addChildItem(group);
+        course.addChildItem(group2);
+
+        univer.listChildItems();
+        kafedra.listChildItems();
+        course.listChildItems();
+
     }
 
     private static void initStudents(){
@@ -47,6 +54,8 @@ public class University {
         groups.add(group1);
         groups.add(group2);
     }
+
+
 
     private static void initTeachers(){
         teachers = new ArrayList<>();

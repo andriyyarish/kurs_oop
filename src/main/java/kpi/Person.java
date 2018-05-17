@@ -1,6 +1,9 @@
 package kpi;
 
+import kpi.univer.Unit;
+
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Person {
@@ -9,6 +12,7 @@ public abstract class Person {
     protected Date dateOfBirth;
     protected final Sex sex;
     protected Adress adress;
+    protected List<Unit> belongsToUnits;
 
     public Person(String firstName, String lastName, Sex sex){
         this.firstName = firstName;
@@ -43,6 +47,14 @@ public abstract class Person {
 
     public Adress getAdress() {
         return adress;
+    }
+
+    public void assignToUnit(Unit unit){
+        belongsToUnits.add(unit);
+    }
+
+    public List<Unit> belongsToUnits(){
+        return belongsToUnits;
     }
 
     public enum Sex{

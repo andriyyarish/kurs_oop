@@ -2,6 +2,7 @@ package kpi.kafedra;
 
 import kpi.kafedra.teachers.ISubject;
 import kpi.kafedra.teachers.Teacher;
+import kpi.univer.Group;
 
 import java.util.HashMap;
 import java.util.Map;
