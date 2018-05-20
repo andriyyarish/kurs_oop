@@ -1,4 +1,4 @@
-package kpi.univer;
+package kpi.univer.units;
 
 public interface IGroup {
     int getSize();

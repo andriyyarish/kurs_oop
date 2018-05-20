@@ -1,7 +1,7 @@
-package kpi.univer;
+package kpi.univer.units;
 
-import kpi.Person;
-import kpi.students.Student;
+import kpi.univer.persons.Person;
+import kpi.univer.persons.srudents.AbstractStudent;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
@@ -12,18 +12,18 @@ import java.util.Objects;
 public class Group implements Unit, IGroup {
     private final String name;
     private Person headOfGroup;
-    private List<Student> students;
+    private List<AbstractStudent> students;
 
     public Group(String name) {
         this.name = name;
         students = new LinkedList<>();
     }
 
-    public void addStudent(Student student){
+    public void addStudent(AbstractStudent student){
         students.add(student);
     }
 
-    public void addStudents(List<Student> students) {
+    public void addStudents(List<AbstractStudent> students) {
         this.students.addAll(students);
     }
 
@@ -35,7 +35,7 @@ public class Group implements Unit, IGroup {
         return headOfGroup;
     }
 
-    public List<Student> getStudents() {
+    public List<AbstractStudent> getStudents() {
         return students;
     }
 

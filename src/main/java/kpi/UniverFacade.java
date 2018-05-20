@@ -1,19 +1,25 @@
 package kpi;
 
-import kpi.univer.*;
-import kpi.kafedra.teachers.ISubject;
-import kpi.kafedra.teachers.Teacher;
-import kpi.students.Student;
+import kpi.univer.learn_process.ISubject;
+import kpi.univer.learn_process.studyPlan.Credit;
+import kpi.univer.learn_process.studyPlan.Exam;
+import kpi.univer.persons.Person;
+import kpi.univer.persons.srudents.DailyFormStudent;
+import kpi.univer.persons.teahers.AbstractTeacher;
+import kpi.univer.persons.srudents.AbstractStudent;
+import kpi.univer.persons.teahers.CompScienceTeacher;
+import kpi.univer.persons.teahers.MathTeacher;
+import kpi.univer.units.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UniverFacade {
 
-    private static List<Student> students;
+    private static List<AbstractStudent> students;
     private static final int STUDENTS_AMOUNT = 90;
     private static List<Group> groups;
-    private static List<Teacher> teachers;
+    private static List<AbstractTeacher> teachers;
 
 
     public static void main(String[] args) {
@@ -40,7 +46,7 @@ public class UniverFacade {
     private static void initStudents(){
         students = new ArrayList<>();
         for(int i = 0; i< STUDENTS_AMOUNT; i++){
-            Student student = new Student("Ivan_"+i,"Ivanov_"+i, Person.Sex.MALE);
+            AbstractStudent student = new DailyFormStudent("Ivan_"+i,"Ivanov_"+i, Person.Sex.MALE);
             students.add(student);
         }
     }
@@ -59,18 +65,14 @@ public class UniverFacade {
 
     private static void initTeachers(){
         teachers = new ArrayList<>();
-        Teacher teacher = new Teacher("John", "Doe", Person.Sex.MALE);
+        AbstractTeacher teacher = new MathTeacher("John", "Doe", Person.Sex.MALE);
         teacher.addSubject(new ISubject.Math());
-        teacher.addSubject(new ISubject.TimeSeries());
 
-        Teacher teacher1 = new Teacher("Angela", "Merkel", Person.Sex.FEMALE);
+        AbstractTeacher teacher1 = new CompScienceTeacher("Angela", "Merkel", Person.Sex.FEMALE);
         teacher1.addSubject(new ISubject.ObjectOrientedProgramming());
 
-        Teacher teacher2 = new Teacher("Petro", "Porokh", Person.Sex.MALE);
-        teacher2.addSubject(new ISubject.DataBase());
 
         teachers.add(teacher);
         teachers.add(teacher1);
-        teachers.add(teacher2);
     }
 }

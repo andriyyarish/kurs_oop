@@ -1,6 +1,6 @@
-package kpi.univer;
+package kpi.univer.units;
 
-import kpi.Person;
+import kpi.univer.persons.Person;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

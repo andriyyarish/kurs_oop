@@ -1,4 +1,4 @@
-package kpi;
+package kpi.univer.persons;
 
 import java.util.Objects;
 
