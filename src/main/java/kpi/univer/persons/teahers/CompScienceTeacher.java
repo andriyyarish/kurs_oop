@@ -1,6 +1,7 @@
 package kpi.univer.persons.teahers;
 
 import kpi.univer.learn_process.ISubject;
+import kpi.univer.persons.srudents.AbstractStudent;
 import kpi.univer.units.Unit;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class CompScienceTeacher extends AbstractTeacher {
     }
 
     @Override
-    public void examine() {
+    public void examine(ISubject subject, AbstractStudent student) {
 
     }
 
@@ -27,6 +28,6 @@ public class CompScienceTeacher extends AbstractTeacher {
 
     @Override
     public List<Unit> belongsToUnit() {
-        return belongsToUnits;
+        return belongToUnits;
     }
 }
