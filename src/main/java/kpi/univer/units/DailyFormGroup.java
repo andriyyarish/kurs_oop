@@ -9,12 +9,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-public class Group implements Unit, IGroup {
+public class DailyFormGroup implements Unit, IGroup {
     private final String name;
     private Person headOfGroup;
     private List<AbstractStudent> students;
 
-    public Group(String name) {
+    public DailyFormGroup(String name) {
         this.name = name;
         students = new LinkedList<>();
     }
@@ -35,10 +35,6 @@ public class Group implements Unit, IGroup {
         return headOfGroup;
     }
 
-    public List<AbstractStudent> getStudents() {
-        return students;
-    }
-
 
     @Override
     public String getName() {
@@ -56,10 +52,15 @@ public class Group implements Unit, IGroup {
     }
 
     @Override
+    public void describeStructure() {
+
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Group group = (Group) o;
+        DailyFormGroup group = (DailyFormGroup) o;
         return Objects.equals(name, group.name) &&
                 Objects.equals(headOfGroup, group.headOfGroup) &&
                 Objects.equals(students, group.students);
@@ -83,5 +84,10 @@ public class Group implements Unit, IGroup {
     @Override
     public int getSize() {
         return 0;
+    }
+
+    @Override
+    public List<AbstractStudent> listStudents() {
+        return students;
     }
 }

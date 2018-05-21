@@ -16,11 +16,11 @@ public class Kourse implements Unit {
         this.name = name;
     }
 
-    public void addGroup(Group group){
+    public void addGroup(DailyFormGroup group){
         groups.add(group);
     }
 
-    public void addGroup(List<Group> group){
+    public void addGroup(List<DailyFormGroup> group){
 
     }
 
@@ -37,6 +37,11 @@ public class Kourse implements Unit {
     @Override
     public void addChildItem(Unit unit) {
         groups.add(unit);
+    }
+
+    @Override
+    public void describeStructure() {
+
     }
 
     @Override

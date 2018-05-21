@@ -63,7 +63,7 @@ public abstract class ISubject {
 
         @Override
         public StudyPlan getStudyPlan() {
-            return new CourseWork(50);
+            return new CourseWork(new Exam(50,50));
         }
 
 

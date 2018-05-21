@@ -1,8 +1,6 @@
 package kpi;
 
 import kpi.univer.learn_process.ISubject;
-import kpi.univer.learn_process.studyPlan.Credit;
-import kpi.univer.learn_process.studyPlan.Exam;
 import kpi.univer.persons.Person;
 import kpi.univer.persons.srudents.DailyFormStudent;
 import kpi.univer.persons.teahers.AbstractTeacher;
@@ -18,28 +16,11 @@ public class UniverFacade {
 
     private static List<AbstractStudent> students;
     private static final int STUDENTS_AMOUNT = 90;
-    private static List<Group> groups;
+    private static List<DailyFormGroup> groups;
     private static List<AbstractTeacher> teachers;
 
 
     public static void main(String[] args) {
-        Univer univer = new Univer();
-
-        Unit kafedra = new Kafedra("IPSA");
-        univer.addChildItem(kafedra);
-
-        Unit course = new Kourse("Second Diploma", 1,true);
-        kafedra.addChildItem(course);
-
-        Unit group = new Group("IS_ZP-71");
-        Unit group2 = new Group("IS_ZP-72");
-
-        course.addChildItem(group);
-        course.addChildItem(group2);
-
-        univer.listChildItems();
-        kafedra.listChildItems();
-        course.listChildItems();
 
     }
 
@@ -53,8 +34,8 @@ public class UniverFacade {
 
     private static void initGroups(){
         groups = new ArrayList<>();
-        Group group1 = new Group("Group_1");
-        Group group2 = new Group("Group_2");
+        DailyFormGroup group1 = new DailyFormGroup("Group_1");
+        DailyFormGroup group2 = new DailyFormGroup("Group_2");
         group1.addStudents(students.subList(0, STUDENTS_AMOUNT/3));
         group2.addStudents(students.subList((STUDENTS_AMOUNT/3)+1, ((STUDENTS_AMOUNT/3)*2)));
         groups.add(group1);

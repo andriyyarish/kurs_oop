@@ -34,6 +34,11 @@ public class Kafedra implements Unit {
     }
 
     @Override
+    public void describeStructure() {
+
+    }
+
+    @Override
     public String toString() {
         return "Kafedra{" +
                 "name='" + name + '\'' +

@@ -30,7 +30,11 @@ public class Univer implements Unit {
         kafedras.add(unit);
     }
 
-    private void listStructure(){}
+    @Override
+    public void describeStructure() {
+
+    }
+
 
     @Override
     public String toString() {

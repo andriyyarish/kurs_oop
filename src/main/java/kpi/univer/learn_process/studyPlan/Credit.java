@@ -1,15 +1,16 @@
 package kpi.univer.learn_process.studyPlan;
 
-public class Credit extends StudyPlan{
+public class Credit implements StudyPlan{
     private final int minimumPassRate;
+    private final int numberOfHours;
 
     public Credit(int numberOfHours, int minimumPassRate) {
-        super(numberOfHours);
         this.minimumPassRate = minimumPassRate;
+        this.numberOfHours = numberOfHours;
     }
 
     @Override
     public String studyPlanDescription() {
-        return String.format("Credit. total duration %d. 3 labs should be done to pass this subject");
+        return String.format("\n Credit: total duration %d.", numberOfHours );
     }
 }
