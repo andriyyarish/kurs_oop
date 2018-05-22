@@ -1,5 +1,6 @@
 package kpi;
 
+import kpi.univer.GroupFactory;
 import kpi.univer.learn_process.ISubject;
 import kpi.univer.persons.Person;
 import kpi.univer.persons.srudents.DailyFormStudent;
@@ -15,13 +16,17 @@ import java.util.List;
 public class UniverFacade {
 
     private static List<AbstractStudent> students;
-    private static final int STUDENTS_AMOUNT = 90;
+    private static final int STUDENTS_AMOUNT = 100;
     private static List<DailyFormGroup> groups;
     private static List<AbstractTeacher> teachers;
 
 
     public static void main(String[] args) {
+        initStudents();
+        List<IGroup> groups = GroupFactory.instantiateGroups(students, new Kafedra("IPSA"));
+        System.out.println(groups);
 
+        groups.forEach(g -> System.out.println(g));
     }
 
     private static void initStudents(){
@@ -41,6 +46,8 @@ public class UniverFacade {
         groups.add(group1);
         groups.add(group2);
     }
+
+
 
 
 
