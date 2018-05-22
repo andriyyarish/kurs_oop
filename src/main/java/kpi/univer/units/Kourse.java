@@ -41,7 +41,8 @@ public class Kourse implements Unit {
 
     @Override
     public void describeStructure() {
-
+        System.out.println("    Kourse: " + courseNumber);
+        groups.forEach(el -> el.describeStructure());
     }
 
     @Override

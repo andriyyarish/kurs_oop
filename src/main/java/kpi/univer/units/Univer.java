@@ -32,7 +32,8 @@ public class Univer implements Unit {
 
     @Override
     public void describeStructure() {
-
+        System.out.println("Kpi University: ");
+        kafedras.forEach(el -> el.describeStructure());
     }
 
 

@@ -7,6 +7,10 @@ public class DistanceFormStudent extends AbstractStudent implements IScheduleObs
         super(firstName, lastName, sex);
     }
 
+    public DistanceFormStudent(String john, String lenon) {
+        super(john, lenon);
+    }
+
     @Override
     public void assignSchoolarship(Double amount) {
         throw new RuntimeException("Distance form students are not allowed to get schoolarship");

@@ -35,7 +35,8 @@ public class Kafedra implements Unit {
 
     @Override
     public void describeStructure() {
-
+        System.out.println(" Kafedra " + name);
+        courses.forEach(el -> el.describeStructure());
     }
 
     @Override

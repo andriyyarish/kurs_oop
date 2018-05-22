@@ -15,6 +15,10 @@ public abstract class AbstractStudent extends Person implements UnitAssignable {
         super(firstName, lastName, sex);
     }
 
+    public AbstractStudent(String firstName, String lastName) {
+        super(firstName, lastName);
+    }
+
     @Override
     public List<Unit> belongsToUnit() {
         ArrayList<Unit> groups = new ArrayList<>();

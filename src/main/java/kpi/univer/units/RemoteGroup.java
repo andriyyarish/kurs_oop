@@ -1,10 +1,25 @@
 package kpi.univer.units;
 
+import kpi.univer.persons.Person;
 import kpi.univer.persons.srudents.AbstractStudent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RemoteGroup implements IGroup, Unit {
+    private final String name;
+    private Person headOfGroup;
+    private List<AbstractStudent> students;
+
+    public RemoteGroup(String name, List<AbstractStudent> students) {
+        this.students.addAll(students);
+        this.name = name;
+    }
+
+    public RemoteGroup(String name) {
+        this.name = name;
+    }
+
     @Override
     public int getSize() {
         return 0;
@@ -12,7 +27,7 @@ public class RemoteGroup implements IGroup, Unit {
 
     @Override
     public List<AbstractStudent> listStudents() {
-        return null;
+        return students;
     }
 
     @Override
@@ -32,6 +47,7 @@ public class RemoteGroup implements IGroup, Unit {
 
     @Override
     public void describeStructure() {
-
+        System.out.println("Remote group: " + name);
+        students.forEach(el -> System.out.println(el.getFirstName()+el.getLastName()));
     }
 }

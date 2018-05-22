@@ -53,7 +53,8 @@ public class DailyFormGroup implements Unit, IGroup {
 
     @Override
     public void describeStructure() {
-
+        System.out.println("        Daily form Group : " + name);
+        students.forEach(el -> System.out.println("                 "+el.getFirstName()+el.getLastName()));
     }
 
     @Override

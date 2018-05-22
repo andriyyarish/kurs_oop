@@ -7,6 +7,10 @@ public class DailyFormStudent extends AbstractStudent implements IScheduleObserv
         super(firstName, lastName, sex);
     }
 
+    public DailyFormStudent(String firstName, String lastName) {
+        super(firstName, lastName);
+    }
+
     @Override
     public void updateSchedule(String info) {
         System.out.println("I am daily form student and just get updates about the schedule");

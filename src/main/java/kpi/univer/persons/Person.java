@@ -10,7 +10,7 @@ public abstract class Person {
     protected final String firstName;
     protected final String lastName;
     protected Date dateOfBirth;
-    protected final Sex sex;
+    protected Sex sex;
     protected Adress adress;
 
 
@@ -19,6 +19,11 @@ public abstract class Person {
         this.lastName = lastName;
         this.sex = sex;
 
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public void setDateOfBirth(Date dateOfBirth) {
