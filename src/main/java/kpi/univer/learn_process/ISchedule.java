@@ -6,4 +6,5 @@ public interface ISchedule {
     void registerObserver(IScheduleObserver observer);
     void removeObserver(IScheduleObserver observer);
     void notifyObservers();
+    void printSchedule();
 }

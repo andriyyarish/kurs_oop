@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class Schedule implements ISchedule {
     private List<IScheduleObserver> observers = new LinkedList<>();
@@ -27,6 +28,11 @@ public class Schedule implements ISchedule {
     @Override
     public void notifyObservers() {
         observers.forEach(el -> el.updateSchedule(schedule.toString()));
+    }
+
+    @Override
+    public void printSchedule() {
+        schedule.forEach((a,b) -> System.out.println(a.getSubjectName() + "---->>>>" +b));
     }
 
     public void addNewSubjectSchedule(ISubject subject, String descr){

@@ -7,7 +7,7 @@ import kpi.univer.learn_process.studyPlan.Exam;
 import kpi.univer.learn_process.studyPlan.StudyPlan;
 
 public abstract class ISubject {
-    private StudyPlan studyPlan;
+    protected StudyPlan studyPlan;
     public abstract String getSubjectName();
     public abstract StudyPlan getStudyPlan();
 
@@ -20,6 +20,13 @@ public abstract class ISubject {
     public void startStudiingProcess(){
         System.out.println("Starting subject");
         studyPlan.studyPlanDescription();
+    }
+
+    @Override
+    public String toString() {
+        return "ISubject{" + "SubjectName: "+ getSubjectName() +
+                "  --->   studyPlan=" + studyPlan.studyPlanDescription() +
+                '}';
     }
 
     public static class Math extends ISubject{
@@ -38,12 +45,7 @@ public abstract class ISubject {
 
         @Override
         public StudyPlan getStudyPlan() {
-            return new Exam(100, 70);
-        }
-
-        @Override
-        public String toString() {
-            return getSubjectName();
+            return studyPlan;
         }
     }
 
@@ -63,14 +65,9 @@ public abstract class ISubject {
 
         @Override
         public StudyPlan getStudyPlan() {
-            return new CourseWork(new Exam(50,50));
+            return studyPlan;
         }
 
-
-        @Override
-        public String toString() {
-            return getSubjectName();
-        }
     }
 
     public static class DataBase extends ISubject{
@@ -89,14 +86,9 @@ public abstract class ISubject {
 
         @Override
         public StudyPlan getStudyPlan() {
-            return new Exam(100, 60);
+            return studyPlan;
         }
 
-
-        @Override
-        public String toString() {
-            return getSubjectName();
-        }
     }
 
     public static class TimeSeries extends ISubject{
@@ -115,13 +107,9 @@ public abstract class ISubject {
 
         @Override
         public StudyPlan getStudyPlan() {
-            return new Credit(150, 60);
+            return studyPlan;
         }
 
-        @Override
-        public String toString() {
-            return getSubjectName();
-        }
     }
 
 }
