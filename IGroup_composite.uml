@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>kpi.univer.units.IGroup</OriginalElement>
+  <nodes>
+    <node x="62.07628205128208" y="0.0">kpi.univer.units.IGroup</node>
+    <node x="0.0" y="139.0">kpi.univer.units.DailyFormGroup</node>
+    <node x="335.15961538461545" y="0.0">kpi.univer.units.Unit</node>
+    <node x="412.6692307692308" y="228.0">kpi.univer.units.Kourse</node>
+    <node x="155.00000000000003" y="139.0">kpi.univer.units.RemoteGroup</node>
+    <node x="398.00000000000006" y="139.0">kpi.univer.units.Kafedra</node>
+    <node x="297.00000000000006" y="139.0">kpi.univer.units.Univer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="kpi.univer.units.RemoteGroup" target="kpi.univer.units.Unit">
+      <point x="40.66666666666666" y="-14.5" />
+      <point x="256.6666666666667" y="89.0" />
+      <point x="353.73653846153854" y="89.0" />
+      <point x="-15.923076923076906" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.Kourse" target="kpi.univer.units.Unit">
+      <point x="10.5" y="-14.5" />
+      <point x="465.1692307692308" y="198.0" />
+      <point x="508.50000000000006" y="198.0" />
+      <point x="508.50000000000006" y="79.0" />
+      <point x="396.198076923077" y="79.0" />
+      <point x="26.538461538461547" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.Kafedra" target="kpi.univer.units.Unit">
+      <point x="-29.666666666666686" y="-14.5" />
+      <point x="412.83333333333337" y="119.0" />
+      <point x="374.9673076923077" y="119.0" />
+      <point x="5.307692307692321" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.Univer" target="kpi.univer.units.Unit">
+      <point x="-27.0" y="-14.5" />
+      <point x="310.50000000000006" y="99.0" />
+      <point x="359.0442307692308" y="99.0" />
+      <point x="-10.615384615384642" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.DailyFormGroup" target="kpi.univer.units.Unit">
+      <point x="44.99999999999997" y="-14.5" />
+      <point x="112.49999999999997" y="69.0" />
+      <point x="343.1211538461539" y="69.0" />
+      <point x="-26.538461538461547" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.DailyFormGroup" target="kpi.univer.units.IGroup">
+      <point x="-45.00000000000003" y="-14.5" />
+      <point x="22.499999999999943" y="49.0" />
+      <point x="83.07628205128208" y="49.0" />
+      <point x="-21.0" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.Kourse" target="kpi.univer.units.DailyFormGroup">
+      <point x="-31.5" y="-14.5" />
+      <point x="423.1692307692308" y="208.0" />
+      <point x="67.5" y="208.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="kpi.univer.units.RemoteGroup" target="kpi.univer.units.IGroup">
+      <point x="-40.66666666666666" y="-14.5" />
+      <point x="175.33333333333337" y="49.0" />
+      <point x="125.07628205128208" y="49.0" />
+      <point x="21.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="42.0" y="14.5" />
+  <SelectedNodes>
+    <node>kpi.univer.units.IGroup</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
